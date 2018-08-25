@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="MGwbYw" name="MonoDelay" displaySplashScreen="1" reportAppUsage="1"
+              splashScreenColour="Dark" projectType="audioplug" version="1.0.0"
+              bundleIdentifier="com.tilt.delay.mono.repeater" includeBinaryInAppConfig="1"
+              buildVST="1" buildVST3="1" buildAU="1" buildAUv3="1" buildRTAS="0"
+              buildAAX="0" buildStandalone="1" enableIAA="0" pluginName="Mono Repeater"
+              pluginDesc="MonoDelay" pluginManufacturer="Tilt Audio" pluginManufacturerCode="Tilt"
+              pluginCode="Mnrp" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
+              pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
+              pluginAUExportPrefix="MonoDelayAU" pluginRTASCategory="" aaxIdentifier="com.yourcompany.MonoDelay"
+              pluginAAXCategory="2" jucerVersion="5.3.2" companyName="Tilt Audio"
+              companyEmail="akash.360@aol.com" cppLanguageStandard="11" companyCopyright="Tilt Audio"
+              pluginFormats="buildVST,buildVST3,buildAU,buildAUv3,buildStandalone">
+  <MAINGROUP id="vbYvCf" name="MonoDelay">
+    <GROUP id="{DC17620F-48C0-F8D1-C1C7-EDDBC35F8209}" name="Source">
+      <GROUP id="{0B4A59B3-CCD3-3AD5-A615-0AA19273C4B4}" name="Resources">
+        <GROUP id="{F3817BBF-7C3A-94E8-E6B0-CB1915E7EB02}" name="Assets">
+          <FILE id="D5xhbu" name="HostButton.png" compile="0" resource="1" file="Resources/Assets/HostButton.png"/>
+          <FILE id="qlFXQB" name="HostButtonPressed.png" compile="0" resource="1"
+                file="Resources/Assets/HostButtonPressed.png"/>
+          <FILE id="aRsvTm" name="LED_off.png" compile="0" resource="1" file="Resources/Assets/LED_off.png"/>
+          <FILE id="j2Fz6e" name="LED_on.png" compile="0" resource="1" file="Resources/Assets/LED_on.png"/>
+          <FILE id="zChnTt" name="MeterGrill.png" compile="0" resource="1" file="Resources/Assets/MeterGrill.png"/>
+          <FILE id="hs6Ck3" name="MonoDelay.png" compile="0" resource="1" file="Resources/Assets/MonoDelay.png"/>
+          <FILE id="oiATK0" name="Switch_position_1.png" compile="0" resource="1"
+                file="Resources/Assets/Switch_position_1.png"/>
+          <FILE id="yyWL6a" name="Switch_position_2.png" compile="0" resource="1"
+                file="Resources/Assets/Switch_position_2.png"/>
+          <FILE id="mUwS2j" name="Switch_side_1.png" compile="0" resource="1"
+                file="Resources/Assets/Switch_side_1.png"/>
+          <FILE id="pJPz2M" name="Switch_side_2.png" compile="0" resource="1"
+                file="Resources/Assets/Switch_side_2.png"/>
+          <FILE id="aA6aq2" name="Thumbs.db" compile="0" resource="1" file="Resources/Assets/Thumbs.db"/>
+          <FILE id="No3Npr" name="TimeManual.png" compile="0" resource="1" file="Resources/Assets/TimeManual.png"/>
+          <FILE id="un8Vek" name="TimeSync.png" compile="0" resource="1" file="Resources/Assets/TimeSync.png"/>
+        </GROUP>
+        <GROUP id="{061EBBB4-BC36-CC37-9903-AF20C07847BB}" name="SVGs">
+          <FILE id="KftGhM" name="rslider.svg" compile="0" resource="1" file="Resources/SVGs/rslider.svg"/>
+          <FILE id="MjNipm" name="rslider_background.svg" compile="0" resource="1"
+                file="Resources/SVGs/rslider_background.svg"/>
+          <FILE id="lTfEj9" name="rslider_white.svg" compile="0" resource="1"
+                file="Resources/SVGs/rslider_white.svg"/>
+        </GROUP>
+      </GROUP>
+      <FILE id="gu93d4" name="Delay.cpp" compile="1" resource="0" file="Source/Delay.cpp"/>
+      <FILE id="DgNJ84" name="Delay.h" compile="0" resource="0" file="Source/Delay.h"/>
+      <FILE id="ZDJLZ6" name="CustomLookAndFeel.cpp" compile="1" resource="0"
+            file="Source/CustomLookAndFeel.cpp"/>
+      <FILE id="aMJ63G" name="CustomLookAndFeel.h" compile="0" resource="0"
+            file="Source/CustomLookAndFeel.h"/>
+      <FILE id="yEUd4u" name="GUI.cpp" compile="1" resource="0" file="Source/GUI.cpp"/>
+      <FILE id="wFf9wB" name="GUI.h" compile="0" resource="0" file="Source/GUI.h"/>
+      <FILE id="fEV0XI" name="MeterComponent.cpp" compile="1" resource="0"
+            file="Source/MeterComponent.cpp"/>
+      <FILE id="REi4LA" name="MeterComponent.h" compile="0" resource="0"
+            file="Source/MeterComponent.h"/>
+      <FILE id="TRSKoF" name="TempoController.cpp" compile="1" resource="0"
+            file="Source/TempoController.cpp"/>
+      <FILE id="iQUfS0" name="TempoController.h" compile="0" resource="0"
+            file="Source/TempoController.h"/>
+      <FILE id="vaHbsA" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="dYtZff" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="Z0wWUd" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="WArcEX" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="MonoDelay"
+                       enablePluginBinaryCopyStep="1"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="MonoDelay"
+                       enablePluginBinaryCopyStep="1"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE5-2/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE5-2/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>
