@@ -7,12 +7,12 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Projucer version: 5.0.2
+  Created with Projucer version: 5.3.2
 
   ------------------------------------------------------------------------------
 
-  The Projucer is part of the JUCE library - "Jules' Utility Class Extensions"
-  Copyright (c) 2015 - ROLI Ltd.
+  The Projucer is part of the JUCE library.
+  Copyright (c) 2017 - ROLI Ltd.
 
   ==============================================================================
 */
@@ -25,6 +25,7 @@
 #include "CustomLookAndFeel.h"
 #include "MeterComponent.h"
 #include "PluginProcessor.h"
+#include "DefaultParameterValues.h"
 //[/Headers]
 
 
@@ -38,13 +39,13 @@
                                                                     //[/Comments]
 */
 class GUI  : public AudioProcessorEditor,
-             public ValueListener,
+			 public Value::Listener,
              public Timer,
              public KeyListener,
              public AudioProcessorValueTreeState::Listener,
-             public SliderListener,
-             public ButtonListener,
-             public ComboBoxListener
+             public Slider::Listener,
+             public Button::Listener,
+             public ComboBox::Listener
 {
 public:
     //==============================================================================
@@ -80,7 +81,7 @@ private:
         int defaultHighCut = 10000;
         float defaultMix = 50;
         int defaultSyncedDelaySelection = 5;
-        bool defaultTempoSyncSwitch = true;
+        bool defaultTempoSyncSwitch = false;
         bool defaultHostSwitch = true;
         bool defaultBypassSwitch = false;
         float defaultInputGain = 0.0;
@@ -110,6 +111,9 @@ private:
     void addParameterListenersToValueTree();
     void addWidgetAttachmentsToValueTree();
     void removeParameterListenersFromValueTree();
+	void resetDefaultValues();
+
+	void unsetValueListeners();
 
     Value delayTime;
     Value bpm;
@@ -148,24 +152,24 @@ private:
     //[/UserVariables]
 
     //==============================================================================
-    ScopedPointer<Slider> delayManualSlider;
-    ScopedPointer<Slider> feedbackSlider;
-    ScopedPointer<Slider> lowCutSlider;
-    ScopedPointer<Slider> highCutSlider;
-    ScopedPointer<Slider> mixSlider;
-    ScopedPointer<TextButton> tapButton;
-    ScopedPointer<ToggleButton> tempoSycnButton;
-    ScopedPointer<Slider> delaySyncSlider;
-    ScopedPointer<ToggleButton> hostButton;
-    ScopedPointer<ComboBox> delayTypeCombo;
-    ScopedPointer<Slider> tempoNumberBox;
-    ScopedPointer<Slider> inputSlider;
-    ScopedPointer<Slider> outputSlider;
-    ScopedPointer<ToggleButton> bypassButton;
-    ScopedPointer<Slider> timeNumberBox;
-    ScopedPointer<TextButton> saveButton;
-    ScopedPointer<TextButton> openButton;
-    ScopedPointer<ToggleButton> performance;
+    std::unique_ptr<Slider> delayManualSlider;
+    std::unique_ptr<Slider> feedbackSlider;
+    std::unique_ptr<Slider> lowCutSlider;
+    std::unique_ptr<Slider> highCutSlider;
+    std::unique_ptr<Slider> mixSlider;
+    std::unique_ptr<TextButton> tapButton;
+    std::unique_ptr<ToggleButton> tempoSycnButton;
+    std::unique_ptr<Slider> delaySyncSlider;
+    std::unique_ptr<ToggleButton> hostButton;
+    std::unique_ptr<ComboBox> delayTypeCombo;
+    std::unique_ptr<Slider> tempoNumberBox;
+    std::unique_ptr<Slider> inputSlider;
+    std::unique_ptr<Slider> outputSlider;
+    std::unique_ptr<ToggleButton> bypassButton;
+    std::unique_ptr<Slider> timeNumberBox;
+    std::unique_ptr<TextButton> saveButton;
+    std::unique_ptr<TextButton> openButton;
+    std::unique_ptr<ToggleButton> performance;
 
 
     //==============================================================================

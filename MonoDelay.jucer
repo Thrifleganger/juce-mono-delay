@@ -14,6 +14,8 @@
               pluginFormats="buildVST,buildVST3,buildAU,buildAUv3,buildStandalone">
   <MAINGROUP id="vbYvCf" name="MonoDelay">
     <GROUP id="{DC17620F-48C0-F8D1-C1C7-EDDBC35F8209}" name="Source">
+      <FILE id="qH8ftY" name="DefaultParameterValues.cpp" compile="1" resource="0"
+            file="Source/DefaultParameterValues.cpp"/>
       <GROUP id="{0B4A59B3-CCD3-3AD5-A615-0AA19273C4B4}" name="Resources">
         <GROUP id="{F3817BBF-7C3A-94E8-E6B0-CB1915E7EB02}" name="Assets">
           <FILE id="D5xhbu" name="HostButton.png" compile="0" resource="1" file="Resources/Assets/HostButton.png"/>
@@ -51,6 +53,8 @@
             file="Source/CustomLookAndFeel.h"/>
       <FILE id="yEUd4u" name="GUI.cpp" compile="1" resource="0" file="Source/GUI.cpp"/>
       <FILE id="wFf9wB" name="GUI.h" compile="0" resource="0" file="Source/GUI.h"/>
+      <FILE id="qVYoVa" name="DefaultParameterValues.h" compile="0" resource="0"
+            file="Source/DefaultParameterValues.h"/>
       <FILE id="fEV0XI" name="MeterComponent.cpp" compile="1" resource="0"
             file="Source/MeterComponent.cpp"/>
       <FILE id="REi4LA" name="MeterComponent.h" compile="0" resource="0"
@@ -69,7 +73,7 @@
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX">
+    <XCODE_MAC targetFolder="Builds/MacOSX" vst3Folder="">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="MonoDelay"
                        enablePluginBinaryCopyStep="1"/>
@@ -94,6 +98,52 @@
         <MODULEPATH id="juce_audio_utils" path="../../JUCE5-2/JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
+    <VS2013 targetFolder="Builds/VisualStudio2013" vst3Folder="F:\SDKs\VST3-3.6.10\VST_SDK\VST3_SDK">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_opengl" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_cryptography" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_basics" path="..\..\JuceDevelop\JUCE\modules"/>
+      </MODULEPATHS>
+    </VS2013>
+    <VS2017 targetFolder="Builds/VisualStudio2017" vst3Folder="F:\SDKs\VST3-3.6.10\VST_SDK\VST3_SDK">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_opengl" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_cryptography" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="..\..\JuceDevelop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_basics" path="..\..\JuceDevelop\JUCE\modules"/>
+      </MODULEPATHS>
+    </VS2017>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
@@ -115,5 +165,6 @@
   <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
   <LIVE_SETTINGS>
     <OSX/>
+    <WINDOWS/>
   </LIVE_SETTINGS>
 </JUCERPROJECT>

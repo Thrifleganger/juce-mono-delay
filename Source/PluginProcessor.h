@@ -81,7 +81,9 @@ public:
     float getInputLevel() const;
     float getOutputLeftLevel() const;
     float getOutputRightLevel() const;
-    
+	Value hostBpm;
+
+	AudioPlayHead::CurrentPositionInfo bpmInfo;
     enum class DelayType {
         DIGITAL = 1, PING_PONG, REVERSE
     };

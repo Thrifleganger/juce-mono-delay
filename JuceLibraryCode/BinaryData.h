@@ -48,13 +48,13 @@ namespace BinaryData
     const int            TimeSync_pngSize = 2562;
 
     extern const char*   rslider_svg;
-    const int            rslider_svgSize = 32759;
+    const int            rslider_svgSize = 33871;
 
     extern const char*   rslider_background_svg;
-    const int            rslider_background_svgSize = 5402;
+    const int            rslider_background_svgSize = 5562;
 
     extern const char*   rslider_white_svg;
-    const int            rslider_white_svgSize = 6483;
+    const int            rslider_white_svgSize = 6689;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
     const int namedResourceListSize = 16;

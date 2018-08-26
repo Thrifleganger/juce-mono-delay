@@ -96,6 +96,12 @@ void MonoDelayAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
     delTap = std::vector<CustomDelayTap>(2, CustomDelayTap());
     lowPassFilter = std::vector<IIRFilter>(2);
     highPassFilter = std::vector<IIRFilter>(2);
+	
+	highPassFilter[0].setCoefficients(IIRCoefficients::makeHighPass(sampleRate, lowCut.getNextValue()));
+	highPassFilter[1].setCoefficients(IIRCoefficients::makeHighPass(sampleRate, lowCut.getNextValue()));
+	lowPassFilter[0].setCoefficients(IIRCoefficients::makeLowPass(sampleRate, highCut.getNextValue()));
+	lowPassFilter[1].setCoefficients(IIRCoefficients::makeLowPass(sampleRate, highCut.getNextValue()));
+	
 }
 
 void MonoDelayAudioProcessor::releaseResources()
@@ -149,7 +155,11 @@ void MonoDelayAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
     buffer.applyGain(dbToAmp(inputGain));
     setInputLevel(linearToLog(buffer.getRMSLevel(0, 0, buffer.getNumSamples())));
     
-    if(!bypass) {
+    if(!bypass) {		
+		if (getPlayHead() != nullptr) {
+			getPlayHead()->getCurrentPosition(bpmInfo);
+			hostBpm.setValue(bpmInfo.bpm);
+		}		
         AudioSamplePair delayedSample, lowCutSample, highCutSample, mixedSample;
         for(int sample = 0; sample < buffer.getNumSamples(); ++sample) {
             delayedSample = handleDelayTypes(sample, input, delayedSample);
