@@ -46,7 +46,6 @@
 		9D2554988EAA5B2CD168F95F = {isa = PBXBuildFile; fileRef = 880204829C142674E6AED4E8; };
 		04DFDA1D4B42F3A38A906E03 = {isa = PBXBuildFile; fileRef = F4A6324B581152489835059C; };
 		EB9520541C2571785C7AD303 = {isa = PBXBuildFile; fileRef = 9C3D1F7BFF67845C5407A1FA; };
-		750390E409E249F8174CC5DB = {isa = PBXBuildFile; fileRef = EC7CB2D4821D40C3004EFD93; };
 		A29DB9E3D8A6B21DA5016099 = {isa = PBXBuildFile; fileRef = 15E6CA48D928244C402959DC; };
 		C0B02269F5BB11B233B33733 = {isa = PBXBuildFile; fileRef = 1545328237659A2490CD315A; };
 		6D76F9CD869D763A6A7DC0B3 = {isa = PBXBuildFile; fileRef = 16B38688C47FED4B66BE649C; };
@@ -155,7 +154,6 @@
 		E4A654A4E92C27A9D245B7C0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = "include_juce_audio_formats.mm"; path = "../../JuceLibraryCode/include_juce_audio_formats.mm"; sourceTree = "SOURCE_ROOT"; };
 		EA0F34E64C82561C0B500727 = {isa = PBXFileReference; lastKnownFileType = file.svg; name = "rslider_white.svg"; path = "../../Resources/SVGs/rslider_white.svg"; sourceTree = "SOURCE_ROOT"; };
 		EBAF1A8DEEAE4AB61223549C = {isa = PBXFileReference; lastKnownFileType = file; name = "juce_events"; path = "../../../../JUCE5-2/JUCE/modules/juce_events"; sourceTree = "SOURCE_ROOT"; };
-		EC7CB2D4821D40C3004EFD93 = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "include_juce_audio_plugin_client_Unity.cpp"; path = "../../JuceLibraryCode/include_juce_audio_plugin_client_Unity.cpp"; sourceTree = "SOURCE_ROOT"; };
 		F0C07B6D9C59C1CA1BFDF060 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DefaultParameterValues.h; path = ../../Source/DefaultParameterValues.h; sourceTree = "SOURCE_ROOT"; };
 		F3AAAD7AC38D0078D5CA81C5 = {isa = PBXFileReference; lastKnownFileType = file.db; name = Thumbs.db; path = ../../Resources/Assets/Thumbs.db; sourceTree = "SOURCE_ROOT"; };
 		F48B06E5F6CD14F51E3D32A1 = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = "include_juce_gui_extra.mm"; path = "../../JuceLibraryCode/include_juce_gui_extra.mm"; sourceTree = "SOURCE_ROOT"; };
@@ -235,7 +233,6 @@
 					880204829C142674E6AED4E8,
 					F4A6324B581152489835059C,
 					9C3D1F7BFF67845C5407A1FA,
-					EC7CB2D4821D40C3004EFD93,
 					15E6CA48D928244C402959DC,
 					1545328237659A2490CD315A,
 					16B38688C47FED4B66BE649C,
@@ -321,7 +318,7 @@
 					"JucePlugin_Build_Standalone=0", );
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INFOPLIST_FILE = Info-VST.plist;
 				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST/";
@@ -360,7 +357,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INFOPLIST_FILE = Info-VST.plist;
 				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST/";
@@ -399,7 +396,7 @@
 					"JucePlugin_Build_Standalone=0", );
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INFOPLIST_FILE = Info-VST3.plist;
 				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST3/";
@@ -438,7 +435,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INFOPLIST_FILE = Info-VST3.plist;
 				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST3/";
@@ -477,7 +474,7 @@
 					"JucePlugin_Build_Standalone=0", );
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INFOPLIST_FILE = Info-AU.plist;
 				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
@@ -517,7 +514,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INFOPLIST_FILE = Info-AU.plist;
 				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
@@ -556,7 +553,7 @@
 					"JucePlugin_Build_AAX=0",
 					"JucePlugin_Build_Standalone=0", );
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INFOPLIST_FILE = Info-AUv3_AppExtension.plist;
 				INFOPLIST_PREPROCESS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -591,7 +588,7 @@
 					"JucePlugin_Build_Standalone=0", );
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INFOPLIST_FILE = Info-AUv3_AppExtension.plist;
 				INFOPLIST_PREPROCESS = NO;
 				LLVM_LTO = YES;
@@ -624,7 +621,7 @@
 					"JucePlugin_Build_AAX=0",
 					"JucePlugin_Build_Standalone=1", );
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
 				INFOPLIST_PREPROCESS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -657,7 +654,7 @@
 					"JucePlugin_Build_Standalone=1", );
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
 				INFOPLIST_PREPROCESS = NO;
 				LLVM_LTO = YES;
@@ -691,7 +688,7 @@
 					"JucePlugin_Build_Standalone=1",
 					"JUCE_SHARED_CODE=1", );
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
@@ -723,7 +720,7 @@
 					"JUCE_SHARED_CODE=1", );
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = ("~/SDKs/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
+				HEADER_SEARCH_PATHS = ("/Users/thrifleganger/Development/VST_SDK/VST3_SDK", "../../JuceLibraryCode", "../../../../JUCE5-2/JUCE/modules", "../../../../JUCE5-2/JUCE/modules/juce_audio_plugin_client", "$(inherited)");
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -987,7 +984,6 @@
 					FA20375CB0ED4D7F000CF3B1,
 					848079FAFF7FCDB4F804C4F0,
 					690F705B0C40907935FEDD0D,
-					750390E409E249F8174CC5DB,
 					A29DB9E3D8A6B21DA5016099,
 					C0B02269F5BB11B233B33733,
 					6A1CDDBDC75B0640DBE74FBA,

@@ -17,7 +17,7 @@
 		<key>MonoDelay - All.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>MonoDelay - Shared Code.xcscheme</key>
 		<dict>
@@ -32,7 +32,7 @@
 		<key>MonoDelay - VST.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>MonoDelay - VST3.xcscheme</key>
 		<dict>
@@ -42,7 +42,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0F429DD2FE07054AD19D909A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>56D1D38564D904F9CFD36E11</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>754EC8BE2E9F3F8DE3C46636</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE6D599C943EF3738DC03AE7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

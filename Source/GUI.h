@@ -39,7 +39,7 @@
                                                                     //[/Comments]
 */
 class GUI  : public AudioProcessorEditor,
-			 public Value::Listener,
+             public ValueListener,
              public Timer,
              public KeyListener,
              public AudioProcessorValueTreeState::Listener,

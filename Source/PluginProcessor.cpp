@@ -97,10 +97,10 @@ void MonoDelayAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
     lowPassFilter = std::vector<IIRFilter>(2);
     highPassFilter = std::vector<IIRFilter>(2);
 	
-	highPassFilter[0].setCoefficients(IIRCoefficients::makeHighPass(sampleRate, lowCut.getNextValue()));
-	highPassFilter[1].setCoefficients(IIRCoefficients::makeHighPass(sampleRate, lowCut.getNextValue()));
-	lowPassFilter[0].setCoefficients(IIRCoefficients::makeLowPass(sampleRate, highCut.getNextValue()));
-	lowPassFilter[1].setCoefficients(IIRCoefficients::makeLowPass(sampleRate, highCut.getNextValue()));
+    highPassFilter[0].setCoefficients(IIRCoefficients::makeHighPass(sampleRate, lowCut.getNextValue() == 0.0 ? 20.0 : lowCut.getNextValue()));
+    highPassFilter[1].setCoefficients(IIRCoefficients::makeHighPass(sampleRate, lowCut.getNextValue() == 0.0 ? 20.0 : lowCut.getNextValue()));
+    lowPassFilter[0].setCoefficients(IIRCoefficients::makeLowPass(sampleRate, highCut.getNextValue() == 0.0 ? 10000.0 : highCut.getNextValue()));
+    lowPassFilter[1].setCoefficients(IIRCoefficients::makeLowPass(sampleRate, highCut.getNextValue() == 0.0 ? 10000.0 : highCut.getNextValue()));
 	
 }
 

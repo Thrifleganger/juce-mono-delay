@@ -123,7 +123,6 @@ GUI::GUI (MonoDelayAudioProcessor& p, AudioProcessorValueTreeState& valueTreeSta
     delayTypeCombo->setTextWhenNoChoicesAvailable (TRANS("(no choices)"));
     delayTypeCombo->addItem (TRANS("Digital"), 1);
     delayTypeCombo->addItem (TRANS("Ping Pong"), 2);
-    delayTypeCombo->addItem (TRANS("Reverse"), 3);
     delayTypeCombo->addListener (this);
 
     delayTypeCombo->setBounds (354, 300, 106, 27);
@@ -242,14 +241,6 @@ GUI::~GUI()
 	removeParameterListenersFromValueTree();
 	resetDefaultValues();
     //[/Destructor_pre]
-
-	logger = nullptr;
-
-	delayManualSliderAttachment = nullptr;
-	feedbackSliderAttachment = nullptr;
-	lowCutSliderAttachment = nullptr;
-	highCutSliderAttachment = nullptr;
-	mixSliderAttachment = nullptr;
 
     delayManualSlider = nullptr;
     feedbackSlider = nullptr;
@@ -527,6 +518,9 @@ void GUI::buttonClicked (Button* buttonThatWasClicked)
     if (buttonThatWasClicked == tapButton.get())
     {
         //[UserButtonCode_tapButton] -- add your button handler code here..
+        if(hostButton->getToggleStateValue().getValue()) {
+            hostButton->triggerClick();
+        }
         isSynced = true;
         bpm = tempoController.generateBpmFromTapTempo();
         //[/UserButtonCode_tapButton]
@@ -542,7 +536,7 @@ void GUI::buttonClicked (Button* buttonThatWasClicked)
         //[UserButtonCode_hostButton] -- add your button handler code here..
         logger->writeToLog(buttonThatWasClicked->getToggleStateValue().getValue());
         if(buttonThatWasClicked->getToggleStateValue().getValue()) {
-            bpm = tempoController.hostBpm;
+            bpm = static_cast<float>(processor.hostBpm.getValue()) <= 0.0 ? var(tempoController.hostBpm) : processor.hostBpm.getValue();
         }
         //[/UserButtonCode_hostButton]
     }
@@ -631,9 +625,6 @@ void GUI::valueChanged(Value& valueThatChanged) {
         if(isSynced.getValue()) {
             delayTime = tempoController.generateTimeInMillisFromTimeSelection(delaySyncSlider->getValue());
         }
-        if(hostButton->getToggleStateValue().getValue()) {
-            hostButton->triggerClick();
-        }
     }
 
     if(valueThatChanged.refersToSameSourceAs(isSynced)) {
@@ -661,9 +652,8 @@ void GUI::valueChanged(Value& valueThatChanged) {
 
 	if (valueThatChanged.refersToSameSourceAs(processor.hostBpm)) {
 		if (hostButton->getToggleStateValue().getValue()) {
-		}
-		else {
-			bpm.setValue(processor.hostBpm.getValue());
+            bpm.setValue(processor.hostBpm.getValue());
+            tempoController.hostBpm = processor.hostBpm.getValue();
 		}
 	}
 }
@@ -996,7 +986,7 @@ BEGIN_JUCER_METADATA
                 connectedEdges="0" needsCallback="1" radioGroupId="0" state="0"/>
   <COMBOBOX name="delayTypeCombo" id="dff6e15bf579cb62" memberName="delayTypeCombo"
             virtualName="" explicitFocusOrder="0" pos="354 300 106 27" editable="0"
-            layout="33" items="Digital&#10;Ping Pong&#10;Reverse" textWhenNonSelected=""
+            layout="33" items="Digital&#10;Ping Pong" textWhenNonSelected=""
             textWhenNoItems="(no choices)"/>
   <SLIDER name="tempoNumberBox" id="2d608151cd509631" memberName="tempoNumberBox"
           virtualName="" explicitFocusOrder="0" pos="418 226 40 20" bkgcol="ff0e1214"
