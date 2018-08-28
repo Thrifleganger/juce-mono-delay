@@ -240,6 +240,12 @@ GUI::~GUI()
 	unsetValueListeners();
 	removeParameterListenersFromValueTree();
 	resetDefaultValues();
+
+	delayManualSliderAttachment = nullptr;
+	feedbackSliderAttachment = nullptr;
+	lowCutSliderAttachment = nullptr;
+	highCutSliderAttachment = nullptr;
+	mixSliderAttachment = nullptr;
     //[/Destructor_pre]
 
     delayManualSlider = nullptr;
